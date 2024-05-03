@@ -1,0 +1,356 @@
+/* Polices d'écriture */
+
+@font-face 
+{
+    font-family: 'Baloo Bhaina';
+    src: url('font/BalooBhaina-Regular.ttf');
+}
+
+@font-face 
+{
+    font-family: 'Noto Sans';
+    src: url('font/NotoSans-Regular.ttf');
+}
+
+@font-face 
+{
+    font-family: 'Reenie Beanie';
+    src: url('font/ReenieBeanie.ttf');
+}
+
+/* Fin de la partie importation police */
+
+.bg-green-coupart
+{
+    background-color: #609a7d;
+}
+
+.bg-grey-coupart
+{
+    background-color: #f1f1f1;
+}
+
+body 
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main
+{
+    flex: 1;
+}
+
+h1, h2, h3, h4, h5
+{
+    font-family: 'Baloo Bhaina';
+}
+
+p
+{
+    font-family: 'Noto Sans';
+}
+
+.title-navbar
+{
+    font-family: 'Reenie Beanie', cursive;
+    text-decoration: none;
+    font-size: 50px;
+    color: #F3F3F7;
+}
+
+.navbar
+{
+    background-color: #609a7d;
+}
+
+.navMenu
+{
+    background-color: #F3F3F7;
+}
+
+.navbar-light .navbar-nav .nav-link
+{
+    font-family: 'Baloo Bhaina';
+    color: #0c0920;
+}
+
+.navbar-expand-lg .navbar-nav
+{
+    margin: auto;
+}
+
+.navbar-light .navbar-toggler
+{
+    padding: 22px;
+    margin: auto;
+}
+
+.navbar-toggler-icon
+{
+    font-size: 35px;
+}
+
+.menus
+{
+    font-family: 'Baloo Bhaina';
+    display: flex;
+    justify-content: center;
+}
+
+.menus > li
+{
+    color: #0c0920;
+}
+
+.mask-jumbotron
+{
+    border-radius: 30px;
+}
+
+.jumbotron-home
+{
+    background: url('../img/jumbotron/jumbotron\ fond.jpg');
+    background-size: 1265px;
+}
+
+.recipe
+{
+    padding-top: 45px;
+}
+
+.recipe .card
+{
+    display: flex;
+}
+
+.btn-slide
+{
+    margin-top: 41px;
+}
+
+.contact
+{
+    padding-top: 55px;
+}
+
+.contact i
+{
+    font-size: 3em;
+}
+
+.contact .form-control
+{
+    width: 75%;
+    border: none;
+    border-bottom: 1px solid #609a7d;
+    background-color: #f1f1f1;
+}
+
+.img-recipe-card
+{
+    width: 265px;
+    height: 265px;
+}
+
+.card-contact
+{
+    display: flex;
+}
+
+.card-contact i
+{
+    color: #609a7d;
+}
+
+/* Partie commentaires */
+
+.comment-user
+{
+    padding-top: 55px;
+    background: url('../img/jumbotron/commentaires.jpg') no-repeat;
+    background-size: 1280px;
+}
+
+.comment-user .card
+{
+    margin: auto;
+    display: table-cell;
+    top: 41px;
+}
+
+.btn-add-comment
+{
+    margin-top: 60px;
+}
+
+footer
+{
+    margin-top: auto;
+    background-color: #F3F3F7;
+    padding: 35px;
+}
+
+.title-footer
+{
+    font-family: 'Reenie Beanie', cursive;
+}
+
+.link-footer li
+{
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+.copyright-bloc
+{
+    background-color: #609a7d;
+    color: #FFFF;
+}
+
+/* Pop-up */
+
+.popup-comment
+{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+/* Partie mention légales */
+
+.legal-mention-text p
+{
+    font-size: 21px;
+}
+
+/* Page services */
+
+.card-services
+{
+    display: flex;
+}
+
+.card-services i
+{
+    font-size: 50px;
+    color: #609a7d;
+}
+
+/* Page a propos */
+
+.intro-biography
+{
+    background-color: #F3F3F7;
+}
+
+.biography-coupart i
+{
+    color: #609a7d;
+    font-size: 30px;
+}
+
+/* Partie administrateur */
+
+.cnx-admin-form
+{
+    background-color: #BFBFBF;
+    border-radius: 21px;
+    margin-top: 35px;
+    padding: 45px;
+}
+
+.cnx-admin-form button
+{
+    margin-top: 1em;
+}
+
+.cnx-admin .form-control
+{
+    width: 50%;
+    margin-left: 244px;
+}
+
+.cnx-admin label
+{
+    font-size: 20px;
+    margin-left: 5em;
+}
+
+.cnx-admin-form i
+{
+    font-size: 66px;
+    color: #609a7d;
+}
+
+.stats-dashboard
+{
+    display: flex;
+}
+
+.icon-stats-card
+{
+    font-size: 3em;
+    color: #609a7d;
+}
+
+.btn-modify-dashboard
+{
+    background-color: #609a7d;
+}
+
+/* Modal pour les cartes des recettes */
+
+.modal 
+{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content 
+{
+    width: 300px;
+    height: 400px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    height: 33%;
+}
+
+.close 
+{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus 
+{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.rounded-form
+{
+    border-radius: 5px;
+}

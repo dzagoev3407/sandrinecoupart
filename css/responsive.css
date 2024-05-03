@@ -1,0 +1,232 @@
+@media screen and (max-width: 995px)
+{
+    .title-navbar
+    {
+        font-size: 120px;
+    }
+
+    .menus > li
+    {
+        font-size: 26px;
+    }
+
+    .jumbotron-home h1
+    {
+        font-size: 80px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .jumbotron-home .lead
+    {
+        font-size: 3em;
+        margin: auto;
+        margin-left: 64px;
+    }
+
+    .btn-rdv
+    {
+        font-size: 2em;
+        padding: 15px;
+        margin-top: 30px;
+    }
+
+    .recipe h3
+    {
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+        font-size: 60px;
+    }
+
+    .recipe .card
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .recipe .card-title
+    {
+        font-size: 50px;
+    }
+
+    .recipe .card-text
+    {
+        font-size: 33px;
+    }
+
+    .contact h3
+    {
+        font-size: 50px;
+    }
+
+    .contact .text-lead
+    {
+        font-size: 25px;
+    }
+
+    .contact i
+    {
+        font-size: 69px;
+    }
+
+    .contact .card-title
+    {
+        font-size: 30px;
+    }
+
+    .title-footer
+    {
+        font-size: 95px;
+    }
+
+    .comment-user .card
+    {
+        display: block;
+    }
+
+    .card-contact
+    {
+        display: inline-flex;
+    }
+
+    footer p
+    {
+        font-size: 32px;
+    }
+
+    footer h2
+    {
+        font-size: 65px;
+    }
+
+    footer li
+    {
+        font-size: 24px;
+    }
+
+    .copyright-bloc
+    {
+        font-size: 2em;
+    }
+
+    /* Partie mention légales */
+
+    .legal-mention-text h5
+    {
+        font-size: 3.4em;
+    }
+
+    .legal-mention-text p
+    {
+        font-size: 1.7em;
+    }
+
+    /* Partie politique de confidentialités */
+
+    .pol-conf-text h5
+    {
+        font-size: 3.4em;
+    }
+
+    .pol-conf-text p
+    {
+        font-size: 1.7em;
+    }
+
+    /* Partie a propos */
+
+    .intro-biography h1
+    {
+        font-size: 72px;
+    }
+
+    .intro-biography p
+    {
+        font-size: 35px;
+    }
+
+    .biography-coupart h2
+    {
+        font-size: 56px;
+        text-align: center;
+    }
+
+    .biography-coupart .lead
+    {
+        font-size: 45px;
+    }
+
+    .biography-coupart .row
+    {
+        display: inline-block;
+        margin-left: 317px;
+    }
+
+    .biography-coupart .card-title
+    {
+        font-size: 40px;
+    }
+
+    .biography-coupart i
+    {
+        font-size: 63px
+    }
+
+    .biography-coupart h6
+    {
+        font-size: 26px;
+    }
+
+    /* Partie services */
+
+    .card-services
+    {
+        display: inline-block;
+    }
+    
+    .card-services h5
+    {
+        font-size: 34px;
+    }
+
+    .card-services i
+    {
+        font-size: 78px;
+    }
+
+    .card-services p
+    {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    /* Partie administrateur */
+
+    .cnx-admin h2
+    {
+        font-size: 65px;
+    }
+
+    .cnx-admin .form-control
+    {
+        width: 50%;
+        margin-left: 174px;
+        height: 65px;
+    }
+
+    .cnx-admin label
+    {
+        font-size: 28px;
+    }
+
+    .stats-dashboard
+    {
+        display: block;
+    }
+
+    .btn-add-dashboard
+    {
+        font-size: 2em;
+    }
+}
