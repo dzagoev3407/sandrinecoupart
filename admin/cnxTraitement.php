@@ -21,15 +21,13 @@ if(isset($_POST['btn-cnx']))
         if(password_verify($mdp, $data[0]['mdp']))
         {
             $_SESSION['pseudo'] = $pseudo;
-            if($pseudo)
-            {
-                header("Location: $panel");
-                exit();
-            }
+            $successMessage = 'Connexion réussie !';
+            $redirectUrl = 'dashboard.php';
         }
         else
         {
-            echo 'Mot de passe incorrect !';
+            $errorMessage = 'Pseudo ou mot de passe incorrect !';
+            $redirectUrl = 'cnx.php';
         }
     }
     else
@@ -42,6 +40,49 @@ else
     echo 'Erreur !';
 }
 
+?>
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Sandrine Coupart - Connexion utilisateur</title>
+    <!-- Styles CSS-->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Responsive -->
+    <link rel="stylesheet" href="../css/responsive.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Sweet alert JS -->
+    <script src="../js/sweetAlert.js"></script>
+</head>
+<body>
+    <script>
+        <?php if(isset($successMessage)): ?>
+            Swal.fire({
+                title: 'Succès !',
+                text: '<?php echo $successMessage; ?>',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then(() => {
+                window.location.href = '<?php echo $redirectUrl; ?>';
+            });
+        <?php elseif(isset($errorMessage)): ?>
+            Swal.fire({
+                title: 'Erreur !',
+                text: '<?php echo $errorMessage; ?>',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            }).then(() => {
+                window.location.href = '<?php echo $redirectUrl; ?>';
+            });
+        <?php endif; ?>
+    </script>
+ </body>
+ </html>
+<?php
+exit();
 ?>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

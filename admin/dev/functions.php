@@ -13,6 +13,19 @@ function noAdmin()
     <?php
 }
 
+function noClient()
+{
+    ?>
+        <div class="alert alert-danger" role="alert">
+            <h1 class="text-center">ALERTE</h1>
+            <p class="lead">Espace réservé aux clients du site ! Veuillez vous connecter dès maintenant !</p>
+        </div>
+    <div class="text-center">
+        <a class="text-decoration-none text-white" href="../../espace_client/cnx-client.php"><button class="btn btn-danger">Retour</button></a>
+    </div>
+    <?php
+}
+
 function cnxSuccessAdmin()
 {
     ?>
