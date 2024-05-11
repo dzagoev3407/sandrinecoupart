@@ -24,7 +24,7 @@ $idClient = $resultatId['id'];
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Sandrine Coupart - Espace client Accueil</title>
+  <title>Sandrine Coupart - Mon profil</title>
   <!-- Styles CSS-->
   <link rel="stylesheet" href="../../css/styles.css">
   <!-- Responsive -->

@@ -13,15 +13,15 @@ if(isset($_POST['submit']))
     {
         /* Requête d'envoi du rdv */
 
-        $sql = "INSERT INTO `coupart_rdv`(`user_id`, `date`, `heure`, `motif_rdv`) 
-                VALUES (:user_id, :date, :heure, :motif_rdv)";
+        $sql = "INSERT INTO `coupart_rdv`(`date`, `heure`, `motif_rdv`, `client_id`) 
+                VALUES (:date, :heure, :motif_rdv, :user_id)";
 
         $req = $db->prepare($sql);
 
-        $req->bindvalue(':user_id', $id_client);
         $req->bindvalue(':date', $date);
         $req->bindvalue(':heure', $heure);
         $req->bindvalue(':motif_rdv', $motif);
+        $req->bindvalue(':user_id', $id_client);
 
         $envoi = $req->execute();
 

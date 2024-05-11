@@ -32,13 +32,13 @@ $idClient = $resultatId['id'];
 
 /* Récupération des rdv du client */
 
-$sqlRecupRdv = "SELECT * FROM `coupart_rdv` WHERE `user_id` = :client_id";
+$sqlRecupRdv = "SELECT * FROM `coupart_rdv` WHERE `client_id` = :client_id";
 
 $reqRecupRdv = $db->prepare($sqlRecupRdv);
 
 $reqRecupRdv->bindvalue(':client_id', $idClient);
 
-$reqRecupRdv->execute();
+$rdvRecup = $reqRecupRdv->execute();
 
 /* Fin de la récupération des rdv */
 
