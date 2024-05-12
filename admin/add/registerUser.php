@@ -27,7 +27,8 @@ if(isset($_POST['add-btn'])) {
 
         if($ajout)
         {
-          echo 'Enregistrement effectué !';
+          $successMessage = "Ajout effectué avec succès !";
+          $redirectUrl = "registerUser.php";
 
           $generateMdp = 'generateMdpAdmin.php';
 
@@ -44,18 +45,19 @@ if(isset($_POST['add-btn'])) {
 
           if($mail)
           {
-            echo "Email envoyé !";
+            $successMessage = "Client ajouté et mail envoyé !";
           }
           else
           {
-            echo "Email non envoyé !";
+            $errorMessage = "Email non envoyé !";
           }
 
         }
         else
-      {
-        echo 'Erreur lors de l\'ajout du nouvel administrateur !';
-      }
+        {
+            $errorMessage = "Erreur lors de l'ajout du nouveau client !";
+            $redirectUrl = "registerUser.php";
+        }
 
     }
 }
@@ -74,6 +76,8 @@ if(isset($_POST['add-btn'])) {
     <link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Sweet alert JS -->
+    <script src="../../js/sweetAlert.js"></script>
 </head>
 <body>
 
@@ -107,6 +111,32 @@ if(isset($_POST['add-btn'])) {
         </div>
     </div>
 </div>
+
+<!-- On affiche le message de confirmation OU d'erreur -->
+<script>
+<?php if(isset($successMessage)): ?>
+    Swal.fire({
+            title: 'Succès !',
+            text: '<?php echo $successMessage; ?>',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        }).then(() => {
+            window.location.href = '<?php echo $redirectUrl; ?>';
+    });
+<?php elseif(isset($errorMessage)): ?>
+    Swal.fire({
+            title: 'Erreur !',
+            text: '<?php echo $errorMessage; ?>',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        }).then(() => {
+            window.location.href = '<?php echo $redirectUrl; ?>';
+    });
+<?php endif; ?>
+</script>
 </body>
+<?php
+exit();
+?>
 <script src="../../js/script.js"></script>
 </html>

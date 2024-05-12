@@ -32,7 +32,8 @@ if(isset($_POST['btn-cnx']))
     }
     else
     {
-        echo 'Aucune de ces informations correspondent à un administrateur de ce site !';
+        $errorMessage = 'Pseudo ou mot de passe incorrect !';
+        $redirectUrl = 'cnx.php';
     }
 }
 else

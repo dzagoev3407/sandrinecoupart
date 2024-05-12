@@ -27,16 +27,13 @@ if(isset($_POST['envoyer']))
 
         if($envoi)
         {
-            ?>
-                <div class="alert alert-success" role="alert">
-                    <p><?php echo $messageConfirm; ?></p>
-                </div>
-                <a href="<?php echo $home; ?>"><button class="btn btn-primary">Retour</button></a>
-            <?php
+            $successMessage = "Message envoyé ! Nous vous répondrons dans les plus brefs délais."; // Message de succès
+            $redirectUrl = "../../index.php"; // Fichier de redirection soit redirection dans la page d'accueil
         }
         else
         {
-            echo 'Erreur lors de l\'envoi !';
+            $errorMessage = "Message non envoyé ! Veuillez réessayez.";
+            $redirectUrl = "../../index.php"; // Fichier de redirection soit redirection dans la page d'accueil
         }
     }
     else
@@ -59,8 +56,33 @@ if(isset($_POST['envoyer']))
 <link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
 <!-- Bootstrap icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Sweet alert JS -->
+<script src="../../js/sweetAlert.js"></script>
 </head>
 <body>
+    <script>
+        <?php if(isset($successMessage)): ?>
+            Swal.fire({
+                title: 'Succès !',
+                text: '<?php echo $successMessage; ?>',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then(() => {
+                window.location.href = '<?php echo $redirectUrl; ?>';
+            });
+        <?php elseif(isset($errorMessage)): ?>
+            Swal.fire({
+                title: 'Erreur !',
+                text: '<?php echo $errorMessage; ?>',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            }).then(() => {
+                window.location.href = '<?php echo $redirectUrl; ?>';
+            });
+        <?php endif; ?>
+    </script>
 </body>
-<script src="../../js/script.js"></script>
+<?php
+exit();
+?>
 </html>
